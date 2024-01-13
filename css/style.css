@@ -1,3 +1,43 @@
-#teste {
-  color: #FF0000;
+body, html {
+  font-family: 'JetBrains Mono', monospace;
+  background: linear-gradient(105deg, #0f1921, #205275);
+  height: 100%;
+  width: 100%;
+  margin: 0;
 }
+
+#light {
+  height: 0;
+  width: 0;
+  background-color: white;
+  border-radius: 50%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  filter: blur(15vh);
+}
+
+#main_div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+h {
+  color: #FFFFFF;
+  font-size: 4vw;
+}
+
+p {
+  color: #FFFFFF;
+  font-size: 1vw;
+}
+
+.teste {
+  color: #FFFFFF;
+}
+
