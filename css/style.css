@@ -7,16 +7,34 @@ body, html {
 }
 
 #light {
+  z-index: 0;
   height: 0;
   width: 0;
-  background-color: white;
+  background: white;
+  opacity: 50%;
   border-radius: 50%;
   position: fixed;
-  left: 0;
-  top: 0;
+  left: 50vw;
+  top: 50vh;
   pointer-events: none;
-  transform: translate(-50%, -50%);
-  filter: blur(15vh);
+  filter: blur(12vh);
+  animation-name: rotation;
+  animation-timing-function: linear;
+  animation-duration: 7s;
+  animation-iteration-count: infinite;
+  transition: 0.1s;
+}
+
+@keyframes rotation {
+  0%{
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  50%{
+    transform: translate(-50%, -50%) rotate(90deg);
+  }
+  100%{
+    transform: translate(-50%, -50%) rotate(180deg);
+  }
 }
 
 #main_div {
@@ -28,12 +46,14 @@ body, html {
 }
 
 h {
-  color: #FFFFFF;
+  color: white;
+  z-index: 100;
   font-size: 4vw;
 }
 
 p {
   color: #FFFFFF;
+  z-index: 100;
   font-size: 1vw;
 }
 
