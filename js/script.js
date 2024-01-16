@@ -7,7 +7,7 @@ document.addEventListener("mousemove", function (event) {
   light.animate({
     left: x + "px",
     top: y + "px"
-  }, { duration: 3000, fill: "forwards" })
+  }, { duration: 5000, fill: "forwards" })
 })
 
 // initialize light
@@ -19,15 +19,15 @@ document.addEventListener("mouseenter", function (event) {
     top: y + "px"
   }, { duration: 0, fill: "forwards"})
   light.animate({
-    width: 50 + "vh",
-    height: 40 + "vh"
+    width: 40 + "vmax",
+    height: 36 + "vmax"
   }, { duration: 500, fill: "forwards" })
 })
 
 // remove light
 document.addEventListener("mouseleave", function (event) {
   light.animate({
-    width: 0 + "vh",
-    height: 0 + "vh",
+    width: 0,
+    height: 0,
   }, { duration: 500, fill: "forwards" })
 })
