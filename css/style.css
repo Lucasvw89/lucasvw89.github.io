@@ -1,14 +1,22 @@
 body, html {
   font-family: 'JetBrains Mono', monospace;
-  background: black;
+  background: transparent;
   /*background: linear-gradient(105deg, #0f1921, #205275);*/
   height: 100%;
   width: 100%;
   margin: 0;
 }
 
-#light {
+#dynamic_background {
   z-index: 0;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(black, black);
+}
+
+#light {
+  z-index: 2;
   height: 0;
   width: 0;
   background-color = white;
@@ -38,7 +46,23 @@ body, html {
   }
 }
 
-#main_div {
+::-webkit-scrollbar {
+  background-color: black;
+  width: .3em;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+  border-radius: .5em;
+  margin-block: 0.2em;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #EEEEEE;
+  border-radius: .5em;
+}
+
+.section {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -55,7 +79,7 @@ h {
 p {
   color: #FFFFFF;
   z-index: 100;
-  font-size: 1svmax;
+  font-size: 2svmax;
 }
 
 .teste {
