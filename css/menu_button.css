@@ -37,6 +37,7 @@
 .gg-arrow-down {
   position: fixed;
   color: #000;
+  pointer-events: none;
 }
 
 body[data-active="true"] > #main_button > .gg-arrow-down {
@@ -110,4 +111,17 @@ body[data-active="true"] > #expanding_ring {
   animation-timing-function: linear;
   animation-duration: 1s;
   animation-iteration-count: infinite;
+}
+
+.menu_button:active {
+  padding: calc(var(--small_button_size) + 3px);
+}
+
+.menu_button:active > #outer_ring {
+  background: black;
+  padding: var(--small_button_size);
+}
+
+.menu_button:active > i {
+  /*color: linear-gradient(45deg, red, purple);*/
 }
