@@ -14,26 +14,23 @@
     </style>
   </head>
 
-  <body>
+  <body data-active="false">
     <div id="dynamic_background"></div>
     <div id="light"></div>
-    <div id="main_button" class="menu_button">
-      <div></div>
+    <div id="expanding_ring"></div>
+    <div id="main_button" class="menu_button" onclick="toggleActive()">
+      <div id="outer_ring"></div>
       <i class="gg-arrow-down"></i>
     </div>
     <div class="section">
       <h>-Welcome-</h>
       <p>My name is -Lucas-</p>
     </div>
-    <div class="section">
-      <p>
-        ...
-      </p>
-    </div>
     <p class="teste" id="X"></p>
     <p class="teste" id="Y"></p>
 
     <script src="js/light.js"></script>
+    <script src="js/main_button.js"></script>
   </body>
 
 </html>

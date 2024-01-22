@@ -1,3 +1,8 @@
+:root {
+  --small_button_size: clamp(2rem, 1.8vmax, 10rem);
+  --large_button_size: clamp(3rem, 2.9vmax, 16rem);
+}
+
 .menu_button {
   transform: translate(-50%, -50%);
   left: 50vw;
@@ -7,8 +12,8 @@
   justify-content: center;
   z-index: 3;
   position: fixed;
-  border-radius: 2vmax;
-  padding: 1.8vmax;
+  border-radius: 100%;
+  padding: var(--small_button_size);
   background: white;
   transition-timing-function: ease;
   transition-duration: 250ms;
@@ -17,13 +22,14 @@
   animation-iteration-count: infinite;
   transition: 0.1s;
   background-image: linear-gradient(45deg, red, purple);
+  cursor: pointer;
 }
 
 .menu_button > div {
-  padding: 1.8vmax;
+  padding: var(--small_button_size);
   position: fixed;
   background: white;
-  border-radius: 2vmax;
+  border-radius: 100%;
   transition-timing-function: ease;
   transition-duration: 250ms;
 }
@@ -31,6 +37,31 @@
 .gg-arrow-down {
   position: fixed;
   color: #000;
+}
+
+body[data-active="true"] > #main_button > .gg-arrow-down {
+  rotate: z 180deg;
+}
+
+#expanding_ring {
+  left: 50vw;
+  top: 92vh;
+  position: fixed;
+  padding: var(--small_button_size);
+  border-radius: 100%;
+  background: transparent;
+  transform: translate(-50%, -50%) scale(0%);
+  border: solid;
+  border-width: 1px;
+  border-color: red;
+  transition-duration: 500ms;
+  pointer-events: none;
+}
+
+body[data-active="true"] > #expanding_ring {
+  transform: translate(-50%, -50%) scale(1000%);
+  border-width: 0px;
+  opacity: 0;
 }
 
 @keyframes rotate_non_stop {
@@ -59,12 +90,12 @@
   z-index: 3;
   position: fixed;
   border-radius: 100%;
-  padding: 2.9vmax;
+  padding: var(--large_button_size);
   background-image: linear-gradient(45deg, red, purple);
 }
 
-.menu_button:hover > div{
-  padding: 2.5vmax;
+.menu_button:hover > #outer_ring{
+  padding: calc(var(--large_button_size) - 10%);
   position: fixed;
   border-radius: 100%;
   background: black;
