@@ -1,4 +1,5 @@
 light = document.getElementById("light");
+button = document.querySelector(".menu_button");
 
 // follow mouse
 document.addEventListener("mousemove", function (event) {
@@ -30,4 +31,18 @@ document.addEventListener("mouseleave", function (event) {
     width: 0,
     height: 0,
   }, { duration: 500, fill: "forwards" })
+})
+
+button.addEventListener("mouseenter", function (event) {
+  light.animate({
+    width: 0,
+    height: 0,
+  }, { duration: 400, fill: "forwards" })
+})
+
+button.addEventListener("mouseleave", function (event) {
+  light.animate({
+    width: 40 + "vmax",
+    height: 36 + "vmax",
+  }, { duration: 400, fill: "forwards" })
 })

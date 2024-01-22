@@ -35,7 +35,7 @@ h {
 }
 
 p {
-  color: #FFFFFF;
+  color: white;
   z-index: 100;
   font-size: var(--small_text);
 }

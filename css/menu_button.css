@@ -1,12 +1,82 @@
-#menu_button {
-  position: fixed;
+.menu_button {
+  transform: translate(-50%, -50%);
+  left: 50vw;
+  top: 92vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   z-index: 3;
-  height: 50px;
-  width: 50px;
-  border-radius: 50px;
-  border-width: 1px;
-  border-style: solid;
-  border-color: white;
-  background: black;
+  position: fixed;
+  border-radius: 2vmax;
+  padding: 1.8vmax;
+  background: white;
+  transition-timing-function: ease;
+  transition-duration: 250ms;
+  animation-timing-function: linear;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  transition: 0.1s;
+  background-image: linear-gradient(45deg, red, purple);
 }
 
+.menu_button > div {
+  padding: 1.8vmax;
+  position: fixed;
+  background: white;
+  border-radius: 2vmax;
+  transition-timing-function: ease;
+  transition-duration: 250ms;
+}
+
+.gg-arrow-down {
+  position: fixed;
+  color: #000;
+}
+
+@keyframes rotate_non_stop {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@keyframes counter_rotate_non_stop {
+  0% {
+    transform: scale(150%) rotate(360deg);
+  }
+  100% {
+    transform: scale(150%) rotate(0deg);
+  }
+}
+
+.menu_button:hover {
+  animation-name: rotate_non_stop;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+  position: fixed;
+  border-radius: 100%;
+  padding: 2.9vmax;
+  background-image: linear-gradient(45deg, red, purple);
+}
+
+.menu_button:hover > div{
+  padding: 2.5vmax;
+  position: fixed;
+  border-radius: 100%;
+  background: black;
+  transition-duration: 100ms;
+  transition-timing-function: ease;
+}
+
+.menu_button:hover > i {
+  color: white;
+  transition-duration: 100ms;
+  animation-name: counter_rotate_non_stop;
+  animation-timing-function: linear;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}

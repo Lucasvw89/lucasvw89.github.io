@@ -3,16 +3,16 @@
   height: 0;
   width: 0;
   background-color = white;
-  background: linear-gradient(100deg, rgba(255,0,0,1), rgba(255,0,0,0) 100%),
-              linear-gradient(220deg, rgba(0,255,0,1), rgba(0,255,0,0) 100%),
-              linear-gradient(340deg, rgba(0,0,255,1), rgba(0,0,255,0) 100%);
+  background: linear-gradient(000deg, rgba(255,0,0,1), rgba(255,0,0,0) 100%),
+              linear-gradient(120deg, rgba(255,255,0,1), rgba(255,255,0,0) 100%),
+              linear-gradient(240deg, rgba(255,0,255,1), rgba(255,0,255,0) 100%);
   opacity: 100;
   border-radius: 50%;
   position: fixed;
   left: 50vw;
   top: 50vh;
   pointer-events: none;
-  filter: blur(12vmax);
+  filter: blur(14vmax);
   animation-name: rotation;
   animation-timing-function: linear;
   animation-duration: 14s;
