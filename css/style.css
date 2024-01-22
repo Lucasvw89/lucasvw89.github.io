@@ -15,8 +15,8 @@ body, html {
 #dynamic_background {
   z-index: 0;
   position: fixed;
-  height: 100lvh;
-  width:  100lvw;
+  height: 100svh;
+  width:  100svw;
   background: linear-gradient(black, black);
 }
 
