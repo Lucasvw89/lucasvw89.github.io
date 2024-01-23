@@ -9,22 +9,38 @@
     <link href="css/light.css" rel="stylesheet">
     <link href="css/scrollbar.css" rel="stylesheet">
     <link href="css/menu_button.css" rel="stylesheet">
+    <link href="css/info_box.css" rel="stylesheet">
     <style>
       @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@800&display=swap');
     </style>
   </head>
 
   <body data-active="false">
-    <div id="dynamic_background"></div>
     <div id="light"></div>
     <div id="expanding_ring"></div>
+    <div id="menu" class="section">
+      <h>-Welcome-</h>
+      <p>My name is -Lucas-</p>
+    </div>
+    <div id="sub_menu" class="section">
+      <div id="info_container">
+        <div class="info_box">
+          <p>Info About Me</p>
+        </div>
+        <div class="info_box">
+          <p>Info About Me</p>
+        </div>
+        <div class="info_box">
+          <p>Info About Me</p>
+        </div>
+        <div class="info_box">
+          <p>Info About Me</p>
+        </div>
+      </div>
+    </div>
     <div id="main_button" class="menu_button" onclick="toggleActive()">
       <div id="outer_ring"></div>
       <i class="gg-arrow-down"></i>
-    </div>
-    <div class="section">
-      <h>-Welcome-</h>
-      <p>My name is -Lucas-</p>
     </div>
     <p class="teste" id="X"></p>
     <p class="teste" id="Y"></p>

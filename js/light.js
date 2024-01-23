@@ -44,5 +44,5 @@ button.addEventListener("mouseleave", function (event) {
   light.animate({
     width: 40 + "vmax",
     height: 36 + "vmax",
-  }, { duration: 400, fill: "forwards" })
+  }, { duration: 300, fill: "forwards" })
 })

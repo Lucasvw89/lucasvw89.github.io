@@ -1,6 +1,7 @@
 ::-webkit-scrollbar {
   background-color: transparent;
   width: .3em;
+  width: 0;
 }
 
 ::-webkit-scrollbar-track {

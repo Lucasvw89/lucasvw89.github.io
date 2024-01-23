@@ -8,7 +8,6 @@ body, html {
   background: black;
   /*background: linear-gradient(105deg, #0f1921, #205275);*/
   height: 100svh;
-  width: 100svw;
   margin: 0;
 }
 
@@ -21,11 +20,53 @@ body, html {
 }
 
 .section {
+  z-index: 3;
+  height: 100svh;
+  transition-timing-function: ease;
+  transition-duration: 500ms;
+}
+
+#menu {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100svh;
+  position: relative;
+}
+
+#sub_menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  transform: scale(0);
+  filter: blur(1vmax);
+}
+
+#info_container {
+  height: calc(100svh - 1vmax);
+  width: calc(100svw - 1vmax);
+  display: grid;
+  grid-row-gap: .5vmax;
+  grid-column-gap: .5vmax;
+  grid-template-columns: 2fr 3fr;
+}
+
+body[data-active="true"] > #menu {
+  transform: translateY(-100%);
+  filter: blur(1vmax);
+  opacity: 0;
+}
+
+body[data-active="true"] > #sub_menu {
+  transform: translateY(-100%) scale(1);
+  filter: blur(0vmax);
+}
+
+body[data-active="true"] > #sub_menu > #info_container > .info_box {
+  transform: scale(1);
+  filter: blur(0vmax);
 }
 
 h {
