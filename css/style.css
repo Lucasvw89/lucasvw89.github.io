@@ -45,8 +45,8 @@ body, html {
 }
 
 #info_container {
-  height: calc(100svh - 1vmax);
-  width: calc(100svw - 1vmax);
+  height: 75vh;
+  width:  75vw;
   display: grid;
   grid-row-gap: .5vmax;
   grid-column-gap: .5vmax;
