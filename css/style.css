@@ -81,6 +81,22 @@ p {
   font-size: var(--small_text);
 }
 
+a {
+  color: white;
+  z-index: 100;
+  font-size: calc(var(--small_text) / 2);
+  text-decoration: none;
+  background: linear-gradient(to right, red, purple);
+  background-size: 0, 0;
+  background-repeat: no-repeat;
+  transition-duration: 500ms;
+  transition-timing-function: ease;
+}
+
+a:hover {
+  background-size: 100%, 100%;
+}
+
 .teste {
   color: #FFFFFF;
 }

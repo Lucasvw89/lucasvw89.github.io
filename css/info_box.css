@@ -8,3 +8,9 @@
   border-width: 2px;
   border-style: solid;
 }
+
+#links {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
