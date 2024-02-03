@@ -89,8 +89,8 @@ a {
   background: linear-gradient(to right, red, purple);
   background-size: 0, 0;
   background-repeat: no-repeat;
-  transition-duration: 500ms;
-  transition-timing-function: ease;
+  transition-duration: 250ms;
+  transition-timing-function: ease-in-out;
 }
 
 a:hover {

@@ -1,5 +1,6 @@
 light = document.getElementById("light");
 button = document.querySelector(".menu_button");
+a = document.querySelector("a");
 
 // follow mouse
 document.addEventListener("mousemove", function (event) {
