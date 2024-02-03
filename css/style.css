@@ -82,6 +82,10 @@ p {
 }
 
 a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: var(--small_text);
   color: white;
   z-index: 100;
   font-size: calc(var(--small_text) / 2);
@@ -94,7 +98,7 @@ a {
 }
 
 a:hover {
-  background-size: 100%, 100%;
+  background-size: 100%;
 }
 
 .teste {
