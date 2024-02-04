@@ -2,11 +2,31 @@
   transition-duration: 500ms;
   transition-timing-function: ease;
   transform: scale(0) translateY(100%);
-  background-color: rgba(0,0,0,.35);
-  border-color: rgba(100,100,100,.5);
+  background-color: rgba(255, 100, 255, .03);
+  border-color: rgba(255, 255, 255, .0);
   border-radius: .75vmax;
   border-width: 2px;
   border-style: solid;
+}
+
+.info_box > p, a {
+  color: rgba(255, 255, 255, 0.1);
+  transition-duration: 500ms;
+  transition-timing-function: ease;
+}
+
+.info_box:hover {
+  background-color: rgba(255,100,255,.10);
+  border-color: rgba(255, 255, 255, .1);
+}
+
+.info_box:hover > p {
+  color: rgba(255, 255, 255, 100);
+}
+
+.info_box:hover > a {
+  transition-duration: 250ms;
+  color: rgba(255, 255, 255, 100);
 }
 
 #links {
