@@ -9,15 +9,46 @@
   border-style: solid;
 }
 
-.info_box > p, a {
-  color: rgba(255, 255, 255, 0.1);
+.info_text {
+  display: inline-block;
+}
+
+.info_box > .info_text > p {
+  color: rgba(255, 255, 255, 0.2);
+  transition-duration: 500ms;
+  transition-timing-function: ease;
+  font-size: calc(var(--small-text) / 2)
+}
+
+.info_box > .info_text > p > a {
+  display: inline;
+  color: rgba(255, 255, 255, 0.2);
+  transition-duration: 500ms;
+  transition-timing-function: ease;
+  font-size: calc(var(--small-text) / 2)
+}
+
+.info_box:hover > .info_text > p > a {
+  color: rgba(255, 255, 255, 1);
+}
+
+.info_box > .info_text > p > a:hover {
+  transition-duration: 250ms;
+}
+
+.info_box > p, a, .info_text > p {
+  color: rgba(255, 255, 255, 0.2);
   transition-duration: 500ms;
   transition-timing-function: ease;
 }
 
 .info_box:hover {
-  background-color: rgba(255,100,255,.10);
+  background-color: rgba(255,150,255,.25);
   border-color: rgba(255, 255, 255, .1);
+}
+
+.info_box:hover > .info_text > p {
+  color: rgba(255, 255, 255, 100);
 }
 
 .info_box:hover > p {
